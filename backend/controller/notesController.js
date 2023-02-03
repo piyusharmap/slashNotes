@@ -1,10 +1,15 @@
 const Note = require("../models/noteModel");
 const ErrorHandler = require("../utils/errorHandler");
 const catchAsyncErrors = require("../middlewares/catchAsyncErrors");
+const ApiFeatures = require("../utils/apiFeatures");
 
 //get all notes
 exports.getAllNotes = catchAsyncErrors(async (req, res) => {
-  const notes = await Note.find();
+  const apiFeature = new ApiFeatures(
+    Note.find({ user: req.user.id }),
+    req.query
+  ).filter();
+  const notes = await apiFeature.query;
 
   res.status(200).json({
     success: "true",
@@ -28,6 +33,8 @@ exports.getDetails = catchAsyncErrors(async (req, res, next) => {
 
 //create note
 exports.createNote = catchAsyncErrors(async (req, res, next) => {
+  req.body.user = req.user.id;
+
   const note = await Note.create(req.body);
 
   res.status(201).json({

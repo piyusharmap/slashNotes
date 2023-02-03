@@ -4,13 +4,13 @@ const noteSchema = new mongoose.Schema({
   title: {
     type: String,
     required: [true, "Note title missing"],
-    maxLength: [80, "Title Lenght can't exceed 80 characters"],
+    maxLength: [80, "Title can't exceed 80 characters"],
   },
 
   content: {
     type: String,
     required: false,
-    maxLength: [250, "Title content can't exceed 250 characters"],
+    maxLength: [250, "Content can't exceed 250 characters"],
   },
 
   category: {
@@ -27,6 +27,12 @@ const noteSchema = new mongoose.Schema({
   createdAt: {
     type: Date,
     default: Date.now,
+  },
+
+  user: {
+    type: mongoose.Schema.ObjectId,
+    ref: "User",
+    required: true,
   },
 });
 
