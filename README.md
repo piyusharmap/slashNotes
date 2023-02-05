@@ -18,7 +18,7 @@ Slash Notes - a note taking application which can do basic CRUD operations and a
 This project is designed to server the backend functionalities for a note taking application using Node.js. It is suitable for Web apps, Mobile apps and Api services.
 
 ## About Author
-I <a href="piyusharmap.com">Piyush Sharma</a> have create this project as a part of MLH prep and fellowship program. 
+I <a href="www.piyusharmap.com">Piyush Sharma</a> have create this project as a part of MLH prep and fellowship program. 
 I've experience with both backend and full stack developement but don't have experience working in the industry. 
 Through this program I want to learn and enhance my developemt skills.
 
