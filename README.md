@@ -44,17 +44,73 @@ I designed this project using Node.js. The main focus is to create a maintainabl
 ### API examples
 <ul>
 
-  <li>Login</li>
-  
-    Method and Headers
+  <li>Login</li>  
+Method and Headers
+
       POST /slashNotes/user/login
       Host: localhost:4000
   
-<br />
-  
-    Request Body
+<br />  
+Request Body
+
       {
           "username": "",
           "password": ""
+      }
+    
+   <li>Forgot Password</li>
+Method and Headers
+    
+      POST /slashNotes/user/password/forgot
+      Host: localhost:4000
+  
+<br />
+Request Body
+
+      {
+          "email": ""
+      }
+      
+  <li>Create Note</li>
+Method and Headers
+
+      POST /slashNotes/notes/new
+      Host: localhost:4000
+  
+<br />
+Request Body
+
+      {
+          "title": "",
+          "content": "",
+          "category": ""
+      }
+      
+  <li>Update Note</li>
+Method and Headers
+
+      PUT /slashNotes/notes/:id
+      Host: localhost:4000
+  
+<br />
+Request Body
+
+      {
+          "title": "",
+          "content": "",
+          "category": ""
+      }
+      
+   <li>Remove Note</li>
+Method and Headers
+
+      DEL /slashNotes/notes/:id
+      Host: localhost:4000
+  
+<br />
+Request Body
+
+      {
+          
       }
 </ul>
