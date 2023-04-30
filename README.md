@@ -1,6 +1,4 @@
-# /Notes (slash notes)
-
-Slash Notes - a note taking application which can do basic CRUD operations and also handle user authentication.
+# Notes
 
 ## Project Highlights
 
